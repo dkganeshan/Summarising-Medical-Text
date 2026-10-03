@@ -1,0 +1,35 @@
+# Local Python virtual environment
+Include/
+Lib/
+Scripts/
+share/
+pyvenv.cfg/
+
+# Training data
+data/
+
+# Training artifacts
+artifacts/
+
+# Training source code
+src/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Git
+.git/
+.gitignore
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

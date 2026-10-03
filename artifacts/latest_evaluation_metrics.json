@@ -1,0 +1,12 @@
+{
+  "model": {
+    "model_name": "google/flan-t5-small",
+    "local_model_path": "C:\\Users\\dkgan\\MyWorkSpace\\Radiology_Report_Summariser\\models\\flan_t5_xray_final",
+    "last_trained_timestamp": "unknown",
+    "evaluation_timestamp": "2026-09-13T13:27:51Z"
+  },
+  "latest_f1_score": 0.6497445373532801,
+  "threshold": 0.3,
+  "passed": true,
+  "evaluation_timestamp": "2026-09-13T13:27:51Z"
+}

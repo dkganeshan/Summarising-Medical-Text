@@ -1,0 +1,27 @@
+========================================
+APPENDIX SAMPLE PREDICTIONS
+========================================
+
+[Sample 1]
+Input Findings:
+The trachea is midline. The cardiomediastinal silhouette is normal. The lungs are clear, without evidence of acute infiltrate or effusion. There is no pneumothorax. The visualized bony structures reveal no acute abnormalities.
+
+Generated Impression:
+No acute cardiopulmonary abnormalities. .
+----------------------------------------
+
+[Sample 2]
+Input Findings:
+The lungs are clear. Heart size and mediastinal contours are normal. No osseous abnormalities.
+
+Generated Impression:
+No acute cardiopulmonary abnormalities.
+----------------------------------------
+
+[Sample 3]
+Input Findings:
+AP and lateral views were obtained. Bibasilar atelectasis and small left-sided pleural effusion. Stable cardiomegaly. No pneumothorax. Mild pulmonary vascular congestion.
+
+Generated Impression:
+Stable cardiomegaly with small left-sided pleural effusion.
+----------------------------------------

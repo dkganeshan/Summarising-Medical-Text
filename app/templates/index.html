@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Radiology Findings Summarizer</title>
+        <style>
+            body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+            textarea { width: 100%; height: 150px; font-size: 1rem; }
+            .button-row { display: flex; gap: 10px; margin-top: 10px; }
+            button { padding: 10px 20px; font-size: 1rem; cursor: pointer; }
+            #result { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; white-space: pre-wrap; }
+        </style>
+    </head>
+    <body>
+        <h2>Radiology Findings Summarizer</h2>
+        <p>Paste free-text findings below and generate a summary impression.</p>
+        <textarea id="findings" placeholder="e.g. The lungs are clear. Heart size and mediastinal contours are normal..."></textarea>
+        <div class="button-row">
+            <button onclick="summarize()">Summarize</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+        </div>
+        <div id="result"></div>
+
+        <script>
+            function clearForm() {
+                document.getElementById('findings').value = '';
+                document.getElementById('result').textContent = '';
+                document.getElementById('findings').focus();
+            }
+
+            async function summarize() {
+                const findings = document.getElementById('findings').value;
+                const resultDiv = document.getElementById('result');
+                resultDiv.textContent = "Generating...";
+
+                try {
+                    const response = await fetch('/summarize', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ findings: findings })
+                    });
+                    const data = await response.json();
+                    if (response.ok) {
+                        resultDiv.textContent = "Impression: " + data.impression;
+                    } else {
+                        resultDiv.textContent = "Error: " + (data.detail || "Something went wrong");
+                    }
+                } catch (err) {
+                    resultDiv.textContent = "Error: " + err.message;
+                }
+            }
+        </script>
+    </body>
+    </html>
