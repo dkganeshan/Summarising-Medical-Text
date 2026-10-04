@@ -1,4 +1,4 @@
-Project 1: Summarising Medical Text
+## Summarising Medical Text
 
 The model was implemented using the relatively small FLAN-T5-small architecture so that fine-tuning could be performed on the available CPU-based local machine within practical memory and training-time constraints. Additional resource-management techniques included a limited training batch size, gradient accumulation and bounded input/output sequence lengths.
 
